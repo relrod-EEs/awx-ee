@@ -1,2 +1,4 @@
 git+https://github.com/ansible/ansible-sign
 ansible-runner>=2.2.1
+pytz
+pynetbox
