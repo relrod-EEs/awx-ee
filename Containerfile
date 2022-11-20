@@ -30,7 +30,6 @@ COPY --from=builder /output/ /output/
 RUN /output/install-from-bindep && rm -rf /output/wheels
 COPY --from=quay.io/ansible/receptor:devel /usr/bin/receptor /usr/bin/receptor
 RUN mkdir -p /var/run/receptor
-RUN pip uninstall -y ansible-core && pip install fallible fallible-compat
 ADD run.sh /run.sh
 CMD /run.sh
 USER 1000
